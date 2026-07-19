@@ -1,0 +1,53 @@
+# config.yaml - Tunable parameters
+camera:
+  device_id: 0
+  width: 640
+  height: 480
+  fps: 30
+
+hand:
+  dominant_side: "RIGHT"
+  detection_confidence: 0.7
+  tracking_confidence: 0.5
+  max_num_hands: 1
+
+gestures:
+  cursor:
+    tracking_landmark: 8  # Index finger tip
+    smoothing:
+      type: "ema"  # "ema" or "one_euro"
+      ema_alpha: 0.35
+      one_euro:
+        min_cutoff: 0.001
+        beta: 0.4
+    dead_zone_pixels: 3
+    speed_multiplier: 1.2  # >1 for faster movement
+
+  left_click:
+    thumb_landmark: 4  # Thumb tip
+    index_landmark: 6  # Index finger middle joint
+    touch_detection:
+      touch_threshold: 0.05  # Distance between thumb and index (0-1 normalized)
+      single_click_touches: 1  # 1 touch = single click
+      double_click_touches: 2  # 2 touches = double click
+      cooldown_ms: 300
+
+  right_click:
+    thumb_landmark: 4  # Thumb tip
+    index_landmark: 6  # Index finger middle joint
+    touch_detection:
+      touch_threshold: 0.05
+      right_click_touches: 3  # 3 touches = right click
+      cooldown_ms: 500
+
+  quit_gesture:
+    hand_closure_threshold: 0.4  # How closed hand needs to be (0-1)
+    hold_frames: 20  # Frames to hold closed position
+
+display:
+  show_overlay: true
+  overlay_width: 400
+  overlay_height: 300
+  show_fps: true
+  show_landmarks: true
+  show_cursor_trail: false

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"D:\\\\Gesture\" -Force)",
+      "Bash(Select-Object Name, PSIsContainer)",
+      "Bash(Format-Table)",
+      "Bash(.\\\\venv\\\\Scripts\\\\python.exe -c \"import mediapipe; print\\([x for x in dir\\(mediapipe\\) if 'solu' in x.lower\\(\\)]\\)\")",
+      "WebFetch(domain:github.com)"
+    ]
+  }
+}

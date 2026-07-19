@@ -1,0 +1,12 @@
+# Activate environment
+venv\Scripts\activate  # Windows
+# source venv/bin/activate  # macOS/Linux
+
+# Run with default config
+python main.py
+
+# Run without display (headless)
+python main.py --no-display
+
+# Use custom config
+python main.py --config my_config.yaml
