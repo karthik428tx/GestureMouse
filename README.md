@@ -1,8 +1,5 @@
-******************************
+👆 Gesture Mouse Control
 ==============================
-👆 Gesture Mouse Control     |
-==============================
-******************************
 
 **Control your computer with hand gestures using real-time computer vision.**
 
